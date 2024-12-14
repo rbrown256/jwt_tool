@@ -779,7 +779,7 @@ def jwksEmbed(newheadDict, newpaylDict):
     newHead["jwk"] = newjwks
     newHead["alg"] = "RS256"
 
-    if newHead["kid"]:
+    if "kid" in newHead:
         newHead["kid"] = "jwt_tool"
 
     key = privKey
